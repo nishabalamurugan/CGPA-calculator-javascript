@@ -1,0 +1,254 @@
+<html>
+    <head>
+        <title>CGPA CALCULATOR</title>
+        <style>
+            .container
+            {
+                display: flex;
+                margin:40px;
+            }
+            .content
+            {
+                margin:40px;
+                border-style: dotted;
+                padding:40px;
+            }
+            .credit
+            {
+                margin:40px;
+                border-style: dotted;
+                padding:40px;
+            }
+        </style>
+        <script>
+            function calculatecgpa()
+            {
+                var a=document.getElementById("s1");
+                var g1=a.options[a.selectedIndex].text;
+                var b=document.getElementById("s2");
+                var g2=b.options[b.selectedIndex].text;
+                var c=document.getElementById("s3");
+                var g3=c.options[c.selectedIndex].text;  
+                var d=document.getElementById("s4");
+                var g4=d.options[d.selectedIndex].text;
+                var e=document.getElementById("s5");
+                var g5=e.options[e.selectedIndex].text;
+                var f=document.getElementById("s6");
+                var g6=f.options[f.selectedIndex].text;
+                
+
+                let c1=document.getElementById("c1").value;
+                let c2=document.getElementById("c2").value;
+                let c3=document.getElementById("c3").value;
+                let c4=document.getElementById("c4").value;
+                let c5=document.getElementById("c5").value;
+                let c6=document.getElementById("c6").value;
+
+                let totalcredit=parseInt(c1)+parseInt(c2)+parseInt(c3)+parseInt(c4)+parseInt(c5)+parseInt(c6);
+                
+                let p1,p2,p3,p4,p5,p6;
+
+                if(g1=='O')
+                {
+                    p1=10;
+                }
+                else if(g1=='A+')
+                {
+                    p1=9;
+                }
+                else if(g1=='A')
+                {
+                    p1=8;
+                }
+                else if(g1=='B+')
+                {
+                    p1=7;
+                }
+                else if(g1=='B')
+                {
+                    p1=6;
+                }
+                if(g2=='O')
+                {
+                    p2=10;
+                }
+                else if(g2=='A+')
+                {
+                    p2=9;
+                }
+                else if(g2=='A')
+                {
+                    p2=8;
+                }
+                else if(g2=='B+')
+                {
+                    p2=7;
+                }
+                else if(g2=='B')
+                {
+                    p2=6;
+                }
+                if(g3=='O')
+                {
+                    p3=10;
+                }
+                else if(g3=='A+')
+                {
+                    p3=9;
+                }
+                else if(g3=='A')
+                {
+                    p3=8;
+                }
+                else if(g3=='B+')
+                {
+                    p3=7;
+                }
+                else if(g3=='B')
+                {
+                    p3=6;
+                }
+                if(g4=='O')
+                {
+                    p4=10;
+                }
+                else if(g4=='A+')
+                {
+                    p4=9;
+                }
+                else if(g4=='A')
+                {
+                    p4=8;
+                }
+                else if(g4=='B+')
+                {
+                    p4=7;
+                }
+                else if(g4=='B')
+                {
+                    p4=6;
+                }
+                
+                if(g5=='O')
+                {
+                    p5=10;
+                }
+                else if(g5=='A+')
+                {
+                    p5=9;
+                }
+                else if(g5=='A')
+                {
+                    p5=8;
+                }
+                else if(g5=='B+')
+                {
+                    p5=7;
+                }
+                else if(g5=='B')
+                {
+                    p5=6;
+                }
+                if(g6=='O')
+                {
+                    p6=10;
+                }
+                else if(g6=='A+')
+                {
+                    p6=9;
+                }
+                else if(g6=='A')
+                {
+                    p6=8;
+                }
+                else if(g6=='B+')
+                {
+                    p6=7;
+                }
+                else if(g6=='B')
+                {
+                    p6=6;
+                }
+                let totalpts=(p1*parseInt(c1))+(p2*parseInt(c2))+(p3*parseInt(c3))+(p4*parseInt(c4))+(p5*parseInt(c5))+(p6*parseInt(c6));
+                let gpa=totalpts/totalcredit;
+                gpa=gpa.toPrecision(2);
+                let res="your GPA is ";
+                res+=gpa;
+                alert(res);
+            }
+        </script>
+    </head>
+    <body>
+        <center><h2>CGPA CALCULATOR</h2><br><br></center>
+    <div class="container">
+    <div class="content">
+        <form>
+            <label for="s1">ENTER GRADE FOR SUBJECT 1 : </label>
+            <select id="s1">
+                <option value="O" >O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            <label for="s2">ENTER GRADE FOR SUBJECT 2 : </label>
+            <select id="s2">
+                <option value="O">O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            <label for="s3">ENTER GRADE FOR SUBJECT 3 : </label>
+            <select id="s3">
+                <option value="O">O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            <label for="s4">ENTER GRADE FOR SUBJECT 4 : </label>
+            <select id="s4">
+                <option value="O">O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            <label for="s5">ENTER GRADE FOR SUBJECT 5 : </label>
+            <select id="s5">
+                <option value="O">O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            <label for="s6" >ENTER GRADE FOR SUBJECT 6 : </label>
+            <select id="s6">
+                <option value="O">O</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+            
+        </form>
+    </div>
+    <div class="credit">
+        <label for="s1"> ENTER CREDITS FOR SUBJECT 1 : </label>
+            <input type="text" id="c1"></input><br><br>
+        <label for="s2"> ENTER CREDITS FOR SUBJECT 2 : </label>
+            <input type="text" id="c2"></input><br><br>
+        <label for="s3"> ENTER CREDITS FOR SUBJECT 3 : </label>
+            <input type="text" id="c3"></input><br><br>
+        <label for="s4"> ENTER CREDITS FOR SUBJECT 4 : </label>
+            <input type="text" id="c4"></input><br><br>
+        <label for="s5"> ENTER CREDITS FOR SUBJECT 5 : </label>
+            <input type="text" id="c5"></input><br><br>
+        <label for="s6"> ENTER CREDITS FOR SUBJECT 6 : </label>
+            <input type="text" id="c6"></input><br><br>
+    </div>
+    </div>
+    <center><button onclick="calculatecgpa()">CALCULATE</button></center>
+</body>
+</html>
